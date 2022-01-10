@@ -1,7 +1,7 @@
 {
   "global": {
     "files": "/src/**/*.*",
-    "exclude": ["demo_failures"],
+    "exclude": ["y_code_pal_example"],
     "skipGeneratedGatewayClasses": true,
     "skipGeneratedPersistentClasses": true,
     "skipGeneratedFunctionGroups": true,
@@ -118,7 +118,18 @@
     "no_yoda_conditions": {
       "onlyConstants": true
     },
-    "object_naming": false,
+    "object_naming": {
+      "clas": "^Y(CX|)_(PAL|CODE_PAL)",
+      "intf": "^Y_IF_(PAL|CODE_PAL)",
+      "prog": "^Y_(PAL|CODE_PAL)",
+      "fugr": "^Y_(PAL|CODE_PAL)",
+      "tabl": "^Y(PAL|CODEPAL|TAB)",
+      "ttyp": "^Y_(PAL|CODE_PAL)",
+      "dtel": "^Y(_PAL|_CODE_PAL|CICC)",
+      "doma": "^Y(_PAL|_CODE_PAL|CICC)",
+      "msag": "^Y_(PAL|CODE_PAL)",
+      "tran": "^Y_(PAL|CODE_PAL)"
+    },
     "obsolete_statement": true,
     "omit_parameter_name": true,
     "omit_receiving": true,
@@ -157,13 +168,15 @@
     "type_form_parameters": true,
     "types_naming": false,
     "uncaught_exception": true,
+    "unnecessary_chaining": true,
     "unknown_types": true,
     "unreachable_code": true,
     "unsecure_fae": false,
     "unused_methods": true,
     "unused_types": true,
     "unused_variables": {
-      "severity": "Warning"
+      "severity": "Warning",
+      "skipNames": []
     },
     "use_bool_expression": true,
     "use_class_based_exceptions": true,
